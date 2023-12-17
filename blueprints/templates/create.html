@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Submit Post{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="mb-4">Submit a Git Project</h1>
+                <form action="/addProject" method="post">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title:</label>
+                        <input type="text" id="title" name="title" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description:</label>
+                        <textarea id="description" name="description" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="link" class="form-label">Link:</label>
+                        <input type="url" id="link" name="link" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

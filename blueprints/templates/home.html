@@ -1,0 +1,26 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}Post Detail{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1>Welcome to REVAPEN</h1>
+                <div class="card">
+                    {% for post in posts %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.description }}</p>
+                        <p class="card-text">{{ post.time }}</p>
+                        <p class="card-text">{{ user.name }}</p>
+                        <a href="{{ post.link }}" target="_blank" class="btn btn-primary">Visit Link</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
